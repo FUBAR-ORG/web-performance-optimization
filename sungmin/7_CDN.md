@@ -122,3 +122,20 @@
 > Link: <https://cdn.example.com/image.png>; rel=dns-prefetch
 - TCP 연결까지 미리 생성하는 프리커넥트
 > Link: <https://cdn.example.com/image.png>; rel=preconnect
+
+### 7.5.2 신기술 적용을 위한 CDN 기능
+
+#### HTTP/2와 HTTP/3
+- CDN 네트워크에서 HTTP/2는 대부분 브라우저와 에지 서버 사이 구간에서만 개시할 수 있는 정적 컨텐츠를 가속하는데 사용
+- 따라서 원본 서버의 HTTP/2 지원 여부와 상관없이 적용 가능
+
+#### 서버 푸시
+- 리소스에 대한 다운로드 요청을 보내지 않아도 필요한 자원들을 미리 전송해주는 기능
+1. CDN에 푸시할 자원들을 미리 지정하는 방식
+
+<img src="img/img_19.png" width="600px" height="400px">
+
+2. 웹 페이지에 푸시할 리소스를 태그로 지정하는 방식
+> <link rel="preload" href="style.css" as="style" />
+
+<img src="img/img_20.png" width="600px" height="400px">
