@@ -115,6 +115,7 @@
 #### DNS 프리페치와 프리커넥트
 - 앞으로 사용될 도메인의 IP 정보를 미리 쿼리
 - 리소스를 다운로드할 도메인이 많은 경우 다운로드 시점에 IP 검색 시간을 줄일 수 있음
+
 ```html
 <link rel="dns-prefetch" href="//image.example.com" /> 
 ```
@@ -136,6 +137,8 @@
 <img src="img/img_19.png" width="600px" height="400px">
 
 2. 웹 페이지에 푸시할 리소스를 태그로 지정하는 방식
-> <link rel="preload" href="style.css" as="style" />
+```html
+<link rel="preload" href="style.css" as="style" />
+```
 
 <img src="img/img_20.png" width="600px" height="400px">
